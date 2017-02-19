@@ -1,14 +1,12 @@
-package com.smolich.stringtoarray;
-
 import java.util.Random;
 
-public class Application {
+public class StringToArray {
 	private String templateString = "12345";
 	private int[] arr;
 	private int[][] arrzamas;
 	
 	public static void main(String[] args) {
-		Application theApp = new Application();
+		StringToArray theApp = new StringToArray();
 		theApp.runTheApp();
 		System.out.println("max of three = ");
 		System.out.println(theApp.maxofthree(3, 5, 6));
