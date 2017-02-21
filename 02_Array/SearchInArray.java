@@ -6,25 +6,23 @@ public class SearchInArray {
 	public static void main(String[] arr) {
 		int[] array1 = new int[] { 100, -22, 43, 14, 11, 55, 101, 202, 101 };
 		SearchInArray searchArr = new SearchInArray();
-		System.out.println(searchArr.search(array1, 14));
-		System.out.println(searchArr.search(array1, 12));
-		System.out.println(searchArr.search(array1, -43));
-		System.out.println(searchArr.search(array1, 100));
-		System.out.println(searchArr.search(array1, 101)); // dvoinoi otvet
-															// 6,8??
+		ReverseArray revArr = new ReverseArray();
+		revArr.print(array1);
+		System.out.println("k=14 answer=" + searchArr.search(array1, 14));
+		System.out.println("k=12 answer=" + searchArr.search(array1, 12));
+		System.out.println("k=-43 answer=" + searchArr.search(array1, -43));
+		System.out.println("k=100 answer=" + searchArr.search(array1, 100));
+		System.out.println("k=101 answer=" + searchArr.search(array1, 101)); // dvoinoi_otvet_6,8??
 	}
-	
-	public String search(int[] arr, int k) {
-		String answer1 = "-1", answerOff = "";
+
+	public int search(int[] arr, int k) {
+		int answer = -1;
 		for (int i = 0; i < arr.length; i++) {
-			if (k == arr[i])
-				if (answerOff.length() > 0)
-					answerOff = answerOff + ", " + i;
-				else answerOff = answerOff + i;
+			if (k == arr[i]) {
+				answer = i;
+				break;
+			}
 		}
-		if (answerOff.length() == 0)
-			return answer1;
-		else
-			return answerOff;
+		return answer;
 	}
 }
