@@ -10,9 +10,9 @@ public class ReverseArray {
 		ReverseArray revArr = new ReverseArray();
 		revArr.print(array);
 		int[] arrayRev = revArr.reverseArrIntBuff(array);
-		System.out.println("исходный массив");
+		System.out.println("РёСЃС…РѕРґРЅС‹Р№ РјР°СЃСЃРёРІ");
 		revArr.print(array);
-		System.out.println("получившийся массив");
+		System.out.println("РїРѕР»СѓС‡РёРІС€РёР№СЃСЏ РјР°СЃСЃРёРІ");
 		revArr.print(arrayRev);
 		revArr.reverseArrVoid(array1);
 		revArr.print(array1);
