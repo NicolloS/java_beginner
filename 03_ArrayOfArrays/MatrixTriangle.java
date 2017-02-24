@@ -8,5 +8,12 @@
  * [n]
  */
 public class MatrixTriangle {
-    
+    public static void main(String[]){
+    	int[][] array; 
+    	for (int i = 0; i < n; i++) {
+			for (int j = i; j < n; j++) {
+				
+			}
+		}
+    }
 }

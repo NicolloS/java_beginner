@@ -50,7 +50,6 @@ public class ReverseArray {
 		return arr2;
 	}
 	public int[] reverseArrIntBuff(int[] arr) {
-		//int[] arr2 = arr;
 		int j = 0,buff;
 		for (int i = arr.length-1; j <arr.length/2; i--,j++) {
 			buff = arr[j];

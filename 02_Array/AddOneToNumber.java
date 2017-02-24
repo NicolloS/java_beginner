@@ -16,7 +16,7 @@ public class AddOneToNumber {
 		int[] array = new int[] { 1, 2, 3 };
 		int[] array1 = new int[] { 1, 2, 9 };
 		int[] array2 = new int[] { 7, 9, 9 };
-		int[] array3 = new int[] { 9, 9, 9, 9 };
+		int[] array3 = new int[] { 9, 1, 9, 9 };
 		AddOneToNumber addOne = new AddOneToNumber();
 		ReverseArray revArr = new ReverseArray();
 		revArr.print(addOne.addOne(array));
@@ -50,7 +50,7 @@ public class AddOneToNumber {
 				arr[i] = 0;
 			} else {
 				arr[i] = arr[i] + 1;
-				//break;
+				break;
 			}
 		}
 		if (arr[0] == 0) {
