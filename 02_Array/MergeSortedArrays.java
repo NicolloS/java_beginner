@@ -1,8 +1,15 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 /**
- * Given a two sorted (ascending) integer arrays A and B. Return array C that is
- * a result of merging A and B (C is also sorted).
+ * Given a two sorted (ascending) integer arrays A and B.
+ * Return sorted array C that is a result of merging A and B.
  *
- * A = [1,2,3,6,7] B = [2,5,12,13] Result: C = [1,2,2,3,5,6,7,12,13]
+ * Example:
+ *   A = [1,2,3,6,7]
+ *   B = [2,5,12,13]
+ * Result:
+ *   C = [1,2,2,3,5,6,7,12,13]
  */
 public class MergeSortedArrays {
 	public static void main(String[] arr) {
@@ -14,6 +21,33 @@ public class MergeSortedArrays {
 		revArr.print(aArr);
 		revArr.print(bArr);
 		revArr.print(cArr);
+
+        System.out.println("********** Console input **********");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter size of array A: ");
+        int arraySizeA = scanner.nextInt();
+        int[] inputDataA = new int[arraySizeA];
+        System.out.println("Enter array A:");
+        for(int i = 0; i < arraySizeA; i++) {
+            inputDataA[i] = scanner.nextInt();
+        }
+        System.out.print("Enter size of array B: ");
+        int arraySizeB = scanner.nextInt();
+        int[] inputDataB = new int[arraySizeB];
+        System.out.println("Enter array B:");
+        for(int i = 0; i < arraySizeB; i++) {
+            inputDataB[i] = scanner.nextInt();
+        }
+
+        System.out.println("**********  Input Array  **********");
+        System.out.println("A = " + Arrays.toString(inputDataA));
+        System.out.println("B = " + Arrays.toString(inputDataB));
+
+        // Add one to input array
+        int[] result = mergeSortedArr.merge(inputDataA, inputDataB);
+
+        System.out.println("********** Result Array  **********");
+        System.out.println(Arrays.toString(result));
 	}
 
 	public int[] merge(int[] a, int[] b) {
