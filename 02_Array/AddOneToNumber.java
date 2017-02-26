@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
+/*
  * Given a non-negative number represented as an array of digits, add 1 to the
  * number (increment the number represented by the digits).
  *
@@ -47,15 +47,16 @@ public class AddOneToNumber {
 	}
 
 	public int[] addOne(int[] arr) {
+		boolean flag = true;
 		for (int i = arr.length - 1; i > -1; i--) {
-			if (arr[i] + 1 > 9) {
+			if ((arr[i] + 1 > 9) && (flag == true)) {
 				arr[i] = 0;
 			} else {
-				arr[i] = arr[i] + 1;
+				arr[i] = arr[i] + 1; flag = false;
 				break;
 			}
 		}
-		if (arr[0] == 0) {
+		if ((arr[0] == 0) && (flag == true)) {
 			int[] arr1 = new int[arr.length + 1];
 			arr1[0] = 1;
 			for (int i = 1; i < arr1.length; i++) {
