@@ -12,7 +12,7 @@
  * Note: The result may be very large, so you need to return a string instead of an integer.
  */
 public class LargestNumber {
-    public String largestNumber(int[] arr) {
+    public void largestNumber(int[] arr) {
     
     }
 }
