@@ -1,4 +1,4 @@
-/**
+/*
  * Maximum Unsorted Subarray.
  *
  * You are given an array (zero indexed) of N non-negative integers, A0, A1, ..., AN-1.

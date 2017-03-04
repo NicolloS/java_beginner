@@ -12,12 +12,14 @@ public class MinInArray {
 		minArr.printTestArray(array1);
 		minArr.printTestArray(array2);
 	}
+
 	public void printTestArray(int[] array) {
 		MinInArray minArr = new MinInArray();
 		ReverseArray revArr = new ReverseArray();
 		revArr.print(array);
-		System.out.println("index min =" + minArr.minIndex(array)+"  value min ="+minArr.minValue(array));
+		System.out.println("index min =" + minArr.minIndex(array) + "  value min =" + minArr.minValue(array));
 	}
+
 	public int minIndex(int[] arr) {
 		int minOfArr = arr[0], index = 0;
 		for (int i = 1; i < arr.length; i++) {
@@ -28,6 +30,7 @@ public class MinInArray {
 		}
 		return index;
 	}
+
 	public int minValue(int[] arr) {
 		int minOfArr = arr[0];
 		for (int i = 1; i < arr.length; i++) {
