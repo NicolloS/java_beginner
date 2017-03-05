@@ -1,4 +1,7 @@
-/**
+import java.util.Arrays;
+import java.util.Scanner;
+
+/*
  * Given a number n &gt; 0. Create a matrix nxn and fill it in with numbers from
  * 1 to nxn as a spiral like the following. E.g. for n = 5, the matrix would
  * look like 
@@ -11,43 +14,46 @@
 public class MatrixSpiral {
 	public static void main(String[] arr) {
 		MatrixSpiral matSpi = new MatrixSpiral();
+		System.out.println("********** Console input **********");
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("Enter size (nxn) n: ");
+			int arraySize = scanner.nextInt();
 
+			int[][] inputData = new int[arraySize][arraySize];
+			System.out.println("Enter array:");
+			inputData = matSpi.arraySpiralVvod(arraySize);
+			System.out.println("**********  Input Array  **********");
+			for (int[] is : inputData) {
+				System.out.println(Arrays.toString(is));
+			}
+		}
 	}
 
 	public int[][] arraySpiralVvod(int n) {
 		int[][] array = new int[n][n];
-		int a,b,c;
-		a= array.length;
-		for (int i = 0; i < a - 1; i++) {
-			for (int j = 0; j < a; j++) {
-
-			} // i j
-			/*//j++ i = 0
-			 * 1 [0][0]	 	1 
-			 * 2 [0][1]		2
-			 * 3 [0][2]		3
-			 * 4 [0][3]		4
-			 * 5 [0][4]		5	///j = length-1=4 i++ //if j=
-			 * 6 [1][4]		6
-			 * 7 [2][4]
-			 * 8 [3][4]
-			 * 9 [4][4]			//j-- i =length-1
-			 * 10 [4][3]
-			 * 11 [4][2]
-			 * 12 [4][1]
-			 * 13 [4][0]		//j = 0 i--
-			 * 14 [3][0]
-			 * 15 [2][0]
-			 * 16 [1][0]
-			 * 17 [1][1]		//j ++  i = 1
-			 * 18 [1][2]
-			 * 19 [1][3]		//j = length-1-1=3  i++
-			 * 20 [2][3]
-			 * 21 [3][3]
-			 * 22 [3]   
-			 */
+		int tic = 1;
+		for (int a = 0; a <= array.length / 2; a++) {
+			for (int j = 0 + a, i = 0 + a; (tic <= n * n) && (i <= n - 1 - a); tic++) {
+				array[i][j] = tic;
+				if (j < n - 1 - a) {
+					j++; 
+				} else {
+					if (i <= n - 1 - a) {
+						i++; 
+					}
+				}
+			}
+			for (int j = n - 2 - a, i = n - 1 - a; (tic <= n * n) && (i > a); tic++) {
+				array[i][j] = tic;
+				if (j > a) {
+					j--;
+				} else {
+					if (i >= a) {
+						i--;
+					}
+				}
+			}
 		}
 		return array;
 	}
-
 }
