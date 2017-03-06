@@ -1,5 +1,5 @@
 /**
- * Roman To Integer.
+ * Integer To Roman.
  *
  * <p>Given a roman numeral, convert it to an integer.</p>
  *
@@ -9,13 +9,13 @@
  *
  * <table>
  * <tr><td colspan="2">Example:</td></tr>
- * <tr><td>Input: </td><td>"XIV"</td></tr>
- * <tr><td>Return: </td><td>14</td></tr>
- * <tr><td>Input: </td><td>"XX"</td></tr>
- * <tr><td>Return: </td><td>20</td></tr>
+ * <tr><td>Input: </td><td>14</td></tr>
+ * <tr><td>Return: </td><td>"XIV"</td></tr>
+ * <tr><td>Input: </td><td>20</td></tr>
+ * <tr><td>Return: </td><td>"XX"</td></tr>
  * </table>
  */
-public class RomanToInteger {
-    public int romanToInt(String a) {
+public class IntegerToRoman {
+    public String intToRoman(int a) {
     }
 }
