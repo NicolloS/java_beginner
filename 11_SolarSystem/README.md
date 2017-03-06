@@ -5,8 +5,8 @@ Let's make a planetary system!
 ### Wave 1
 - Create a custom **class**
 - Create and use a **constructor** with parameters in your class
--- factory method
--- builder
+  - factory method
+  - builder
 - Create and use **instance variables** in your class (=`fields`, =`attributes`)
 
 ### Wave 2
