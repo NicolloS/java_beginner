@@ -13,6 +13,8 @@
  *
  * GCD(m, n) : 3
  * </code></pre>
+ *
+ * <p><b>Note:</b> write a <i>recursive</i> version of the algorithm.</p>
  */
 public class GreatestCommonDivisor {
     public int gcd(int a, int b) {
