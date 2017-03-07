@@ -32,26 +32,26 @@ public class MatrixSpiral {
 	public int[][] arraySpiralVvod(int n) {
 		int[][] array = new int[n][n];
 		int tic = 1;
-		for (int a = 0; a <= array.length / 2; a++) {
-			for (int j = 0 + a, i = 0 + a; (tic <= n * n) && (i <= n - 1 - a); tic++) {
+		for (int sloj = 0; sloj <= array.length / 2; sloj++) {
+			// po stroke =>
+			for (int j = sloj, i = sloj; j < n - 1 - sloj; j++) {
 				array[i][j] = tic;
-				if (j < n - 1 - a) {
-					j++; 
-				} else {
-					if (i <= n - 1 - a) {
-						i++; 
-					}
-				}
+				tic++;
 			}
-			for (int j = n - 2 - a, i = n - 1 - a; (tic <= n * n) && (i > a); tic++) {
+			// po stolbcy vniz
+			for (int j = n - 1 - sloj, i = sloj; i <= n - 1 - sloj; i++) {
 				array[i][j] = tic;
-				if (j > a) {
-					j--;
-				} else {
-					if (i >= a) {
-						i--;
-					}
-				}
+				tic++;
+			}
+			// po stroke <=
+			for (int j = n - 2 - sloj, i = n - 1 - sloj; j > sloj; j--) {
+				array[i][j] = tic;
+				tic++;
+			}
+			// po stolbcy vverx
+			for (int j = sloj, i = n - 1 - sloj; i > sloj; i--) {
+				array[i][j] = tic;
+				tic++;
 			}
 		}
 		return array;
