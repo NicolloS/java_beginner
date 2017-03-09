@@ -1,5 +1,5 @@
 /**
- * Count Element Occurence.
+ * Count Element Occurrence.
  *
  * Given a sorted array of integers, find the number of occurrences of a given value K.
  *

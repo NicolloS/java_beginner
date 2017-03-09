@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="01_Basic/|02_Array/|03_ArrayOfArrays/|04_BinarySearch/|05_Sorting/|06_Strings/|07_Recursion/|11_SolarSystem/|01_Basic/|02_Array/|03_ArrayOfArrays/|04_BinarySearch/|05_Sorting/|06_Strings/|07_Recursion/|11_SolarSystem/" kind="src" path=""/>
+	<classpathentry kind="src" path="01_Basic"/>
+	<classpathentry kind="src" path="02_Array"/>
+	<classpathentry kind="src" path="03_ArrayOfArrays"/>
+	<classpathentry kind="src" path="04_BinarySearch"/>
+	<classpathentry kind="src" path="05_Sorting"/>
+	<classpathentry kind="src" path="06_Strings"/>
+	<classpathentry kind="src" path="07_Recursion"/>
+	<classpathentry kind="src" path="11_SolarSystem"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

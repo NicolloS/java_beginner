@@ -15,7 +15,7 @@
  * ]
  */
 public class PascalTriangle {
-    public intp[][] buildPascalTriangle(int n) {
+    public int[][] buildPascalTriangle(int n) {
     }
 }
 
