@@ -16,11 +16,17 @@ public class Planet {
 	Planet() {
 	};
 
+	void setDistanceFromTheSun(Double distance) {
+		distanceFromTheSun = distance;
+	}
+
 	Planet(String text) {
 		name = text;
 	}
 
 	public String toString() {
-		return name +" "+ radius+ " " + mass;
+		return name + " " + radius + " " + mass + " " + moons + " " + distanceFromTheSun + " " + rotationRate;
 	}
+	
+
 }
