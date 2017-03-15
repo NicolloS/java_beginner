@@ -1,17 +1,14 @@
-package com.solarsystem;
+package com.solarsystem.main;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
+import com.solarsystem.Planet;
+import com.solarsystem.SolarSystem;
+
+
 public class Main {
 	public static void main(String[] app) {
-		//Planet mercury = new Planet("Mercury");
-		//System.out.println("name of planet #1 Solar system : " + mercury.name);
-		//System.out.println("mass of planet #1 Solar system : " + mercury.mass);
-		//System.out.println("radius of planet #1 Solar system : " + mercury.radius);
-		// Planet pi = null;
-		// pi.toString();
-		//System.out.println(Arrays.toString(new Planet[10]));
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println("Enter size Solar system : ");
 			int arraySizeSolarSustem = scanner.nextInt();
@@ -21,21 +18,21 @@ public class Main {
 				System.out.println("Enter Name of planet:");
 				Planet input = new Planet(scanner.next());
 				System.out.println("Enter radius of planet 1000km:");
-				input.radius = scanner.nextDouble();
+				input.setRadius(scanner.nextDouble());
 				System.out.println("Enter mass of planet 1000t:");
-				input.mass = scanner.nextDouble();
+				input.setMass(scanner.nextDouble());
 				System.out.println("Enter kol-vo moons of planet:");
-				input.moons = scanner.nextInt();
+				input.setMoons(scanner.nextInt());
 				System.out.println("Enter distanceFromTheSun of planet in a.e.:");
-				input.distanceFromTheSun = scanner.nextDouble();
+				input.setDistanceFromTheSun(scanner.nextDouble());
 				System.out.println("Enter rotationRate of planet (hour):");
-				input.rotationRate = scanner.nextDouble();
+				input.setRotationRate(scanner.nextDouble());
 				inputData[i] = input;
 			}
 			int a = 0;
 			// System.out.println(new Planet());
 			for (Planet is : inputData) {
-				System.out.println("[" + a + "]" + inputData[a].name);
+				System.out.println("[" + a + "]" + inputData[a].getName());
 				a++;
 			}
 			System.out.println("[" + arraySizeSolarSustem + "] Exit ");
@@ -50,7 +47,11 @@ public class Main {
 				// }
 				
 			}
-
+			
+			SolarSystem solar = new SolarSystem();
+			solar.setPlanets(inputData);
+			//for ()
+			System.out.println(solar.printPlanet());
 			// switch (numberOfPlanet) {
 			// case 1: {
 			// System.out.println("[" + a + "]" + inputData[a]);

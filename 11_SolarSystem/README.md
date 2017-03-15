@@ -13,7 +13,7 @@ Let's make a planetary system!
 # Wave 1
 ## Primary Requirements
 - Create a `SolarSystem` class with a `planets` attribute.
-- Create an initialize method which should take a collection of planet names and store them in a `planets` attribute.
+- Create an initialize method which should take a collection of planets and store them in a `planets` attribute.
 - Create a method to add a planet to the list.
 - Create a method which will return **not print** a list of the planets as a String in this style:
 
