@@ -47,7 +47,7 @@ public class Main {
 				// }
 				
 			}
-			
+			System.gc();
 			SolarSystem solar = new SolarSystem();
 			solar.setPlanets(inputData);
 			//for ()

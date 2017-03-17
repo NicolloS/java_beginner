@@ -1,5 +1,7 @@
 package com.solarsystem;
 
+import java.lang.management.GarbageCollectorMXBean;
+
 public class SolarSystem {
 	String star;
 	Planet[] planets;
